@@ -1,0 +1,25 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Chart from "../components/state/components/States";
+import MarketShare from "../components/market";
+import LastSales from "../components/lastsales"
+import State from "../components/state";
+---
+
+<Layout title="Welcome to Astro.">
+	<!-- <SalesDashboard />
+	<Counter /> -->
+	<main class="min-h-screen bg-[#12141C] flex flex-col items-center">
+		<div class="max-w-[1150px]">
+			<div>
+				<State client:load />
+			</div>
+			<div class="pt-10">
+				<MarketShare client:load />
+			</div>
+			<div>
+				<LastSales client:load />
+			</div>
+		</div>
+	</main>
+</Layout>
